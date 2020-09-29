@@ -1,0 +1,49 @@
+{%load static%}
+<!DOCKTYPE html>
+<html>
+<head>
+    <title></title>
+<link rel="stylesheet"
+    href="{ % static 'css/home.css' %}">
+</head>
+<h1 style="text-align-last: center;">Password Generator</h1>
+<div style="text-align-last: center;">
+<form action = "{% url 'password' %}">
+<select name = "length">
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10" selected="selected">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+</select>
+<section id = 'pus'>
+<br>
+<input type = "checkbox" name = "uppercase"> Uppercase
+<br>
+<input type = "checkbox" name = "numbers"> Numbers
+<br>
+<input type = "checkbox" name = "specialC"> Special Character
+<br>
+</section>
+
+<br>
+<button>
+<input type= "submit" value="Generate password">
+</button>
+</form>
+
+<br>
+<a href="{% url 'about'%}">About</a>
+<!-- {{password}} -->
+</div>
+<br>
+<br>
+<br>
+<br>
+
+Creater - Pushkar Tiwari
+</html>
